@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียดโครงการ - TWF Company</title>
+    <link rel="icon" href="/images/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body style="background-color: #eeeeee;">
+
+    <!-- Header -->
+    <div class="sticky-top fw-bold fs-6" style="padding-left: 100px; padding-right: 100px; background-color: #f5f5f5;">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 " style="background-color: #f5f5f5;">
+            <a href="/index.html"
+                class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="images/logo.svg" alt="TWF Logo" class="logo" width="50" height="50" class="me-2">
+                <span class="fs-4" style="margin-left: 10px;">TWF Company</span>
+            </a>
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="/index.html" class="nav-link" aria-current="page">หน้าเเรก</a></li>
+                <li class="nav-item"><a href="/services.html" class="nav-link">บริการของเรา</a></li>
+                <li class="nav-item"><a href="/news&activity.html" class="nav-link">ข่าวสารเเละกิจกรรม</a></li>
+                <li class="nav-item"><a href="/villages.html" class="nav-link">หมู่บ้านที่เราดูเเล</a></li>
+                <li class="nav-item"><a href="/about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+                <li class="nav-item"><a href="/contact.html" class="nav-link">ติดต่อเรา</a></li>
+            </ul>
+        </header>
+    </div>
+    <!-- End Header -->
+
+    <!-- Hero -->
+    <div class="container py-5">
+        <h1 id="village-title"></h1>
+        <p id="village-location" class="text-muted"></p>
+        <div id="gallery" class="row row-cols-1 row-cols-md-3 g-4"></div>
+        <a href="villages.html" class="btn btn-primary mt-4">⬅ กลับไปหน้าหมู่บ้าน</a>
+    </div>
+    <!-- End Hero -->
+
+    
+    <script>
+        const data = {
+            1: {
+                title: "CasaWaterSide พระราม 5",
+                location: "อ.บางกรวย จ.นนทบุรี",
+                images: ["images/village/CASAWATERSIDE_พระราม5.jpg"]
+            },
+            2: {
+                title: "Perfect Park สุวรรณภูมิ เฟส 4",
+                location: "ร่มเกล้า 6/1",
+                images: ["images/village/LINE_NOTE_250820_2.jpg"]
+            },
+            3: {
+                title: "พฤกษา วิลเลจ 35",
+                location: "ถ.กาญจนาภิเษก",
+                images: ["images/village/LINE_NOTE_250820_3.jpg"]
+            },
+            4: {
+                title: "พฤกษา วิลเลจ พุทธมณฑล สายสี่",
+                location: "หมู่ที่ 6 ต.กระทุ่มล้ม อ.สามพราน จ.นครปฐม ",
+                images: ["images/village/LINE_NOTE_250820_6.jpg"]
+            },  
+            5: {
+                title: "พฤกษา วิลเลจ 80 ท่าข้าม-พระราม2",
+                location: "ถ.พระราม 2",
+                images: ["images/village/PRUKSA_VILLE80ท่าข้าม-พระราม2.jpg"]
+            },
+            6: {
+                title: "บ้านพฤกษา หนามแดง เทพารักษ์",
+                location: "ต.บางพลีใหญ่ อ.บางพลี จ.สมุทรปราการ",
+                images: ["images/village/บ้านพฤกษา-หนามแดง-เทพารักษ์.jpg"]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        if (data[id]) {
+            document.getElementById("village-title").innerText = data[id].title;
+            document.getElementById("village-location").innerText = data[id].location;
+
+            const gallery = document.getElementById("gallery");
+            data[id].images.forEach(img => {
+                gallery.innerHTML += `
+            <div class="col">
+            <img src="${img}" class="img-fluid rounded shadow-sm">
+            </div>
+        `;
+            });
+        } else {
+            document.getElementById("village-title").innerText = "ไม่พบข้อมูลโครงการนี้";
+        }
+    </script>
+
+
+    <!-- Footers -->
+    <div class="p-3 text-center" style="background-color: #333333 ; color: #ffffff; ">
+        <footer class="my-4">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <img src="images/logo.svg" alt="TWF Logo" class="img-fluid" style="max-width:150px;">
+            </div>
+            <p>9/150 ม.4 ถ.นครอินทร์ ต.บางขุนทอง อ.บางกรวย จ.นนทบุรี 11130 <br> โทร 084-219-2688 <br> E-mail :
+                TWF.BISINESS@GMAIL.com</p>
+            <p class="text-center ">© 2025 TWF Company</p>
+        </footer>
+    </div>
+    <!-- End Footers -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
