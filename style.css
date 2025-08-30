@@ -1,0 +1,503 @@
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    text-transform: none;
+}
+
+/* ลิงก์ปกติ */
+.nav-pills .nav-link {
+    color: #333;
+    /* สีตัวอักษรปกติ */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover */
+.nav-pills .nav-link:hover {
+    background-color: #c99700;
+    /* สีทองเมื่อ hover */
+    color: white;
+    /* ตัวอักษรขาว */
+}
+
+/* Active */
+.nav-pills .nav-link.active {
+    background-color: #8c6239;
+    /* น้ำตาลทอง */
+    color: white;
+}
+
+.btn-primary,
+.bg-primary {
+    background-color: #c99700 !important;
+    /* สีทอง */
+    border-color: #c99700 !important;
+}
+
+.btn-primary:hover {
+    background-color: #b8860b !important;
+    /* hover */
+}
+
+.feature-icon-small {
+    background-color: #c99700;
+    /* ใช้สีทองเหมือนปุ่ม */
+    color: #fff;
+    /* ไอคอนเป็นสีขาว */
+    width: 3rem;
+    height: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    /* มนเหมือนปุ่ม */
+}
+
+.bg-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/skyscraper-9226515.jpg') no-repeat center center/cover;
+    filter: blur(7px) brightness(0.7);
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-highlight {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8)
+        /* เงาดำ */
+}
+
+.cover-about {
+    min-height: 400px;
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 auto;
+    /* ขอบมนกล่องใหญ่ */
+}
+
+.bg-features {
+    min-height: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    /* ขอบมนกล่องใหญ่ */
+}
+
+.bg-blur-features {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/pexels-fauxels-3184357.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.content {
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
+    /* กล่องข้อความใส ๆ */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.Spark {
+    background: url('images/pexels-fauxels-3183165.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/skyscraper-9226515.jpg') no-repeat center center/cover;
+    filter: blur(7px) brightness(0.7);
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* อนิเมทชั่นนน */
+/* Hero Text Animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.display-3,
+.lead {
+    animation: fadeUp 1.2s ease-out forwards;
+}
+
+/* Logo Bounce */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+
+    80% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo {
+    animation: bounceIn 1.5s ease-out;
+}
+
+/* Button Hover Glow */
+.btn-primary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(201, 151, 0, 0.7);
+}
+
+/* Spark Section Moving Background */
+@keyframes moveBg {
+    0% {
+        background-position: center top;
+    }
+
+    50% {
+        background-position: center bottom;
+    }
+
+    100% {
+        background-position: center top;
+    }
+}
+
+.Spark {
+    animation: moveBg 20s ease-in-out infinite;
+}
+
+/* Hero fade-in แบบไล่ลำดับ */
+.hero-fade {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease-out forwards;
+}
+
+.hero-fade:nth-child(1) {
+    animation-delay: 0.3s;
+    /* รูป */
+}
+
+.hero-fade:nth-child(2) {
+    animation-delay: 0.6s;
+    /* H1 */
+}
+
+.hero-fade:nth-child(3) {
+    animation-delay: 0.9s;
+    /* paragraph */
+}
+
+.hero-fade:nth-child(4) {
+    animation-delay: 1.2s;
+    /* contact */
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* services animation */
+/* ===== Scroll reveal variants ===== */
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-zoom {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.reveal-up {
+    transform: translateY(60px);
+}
+
+.reveal-left {
+    transform: translateX(-60px);
+}
+
+.reveal-right {
+    transform: translateX(60px);
+}
+
+.reveal-zoom {
+    transform: scale(0.96);
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: none;
+}
+
+/* Stagger effect สำหรับ child ภายใน */
+.reveal-active>.stagger-1 {
+    transition-delay: .08s;
+}
+
+.reveal-active>.stagger-2 {
+    transition-delay: .16s;
+}
+
+.reveal-active>.stagger-3 {
+    transition-delay: .24s;
+}
+
+.reveal-active>.stagger-4 {
+    transition-delay: .32s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal-up,
+    .reveal-left,
+    .reveal-right,
+    .reveal-zoom {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* news&activity animation */
+/* Fade-in effect for cards */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.card:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover effect on cards */
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Button animation */
+.btn-primary {
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c99700;
+    box-shadow: 0 0 15px rgba(201, 151, 0, 0.7);
+    transform: translateY(-3px);
+}
+
+
+/*about animation */
+
+/* === IMAGE ZOOM-IN (เมื่อโหลดหรือ scroll) === */
+.img-fluid {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 1s ease forwards;
+}
+
+.img-fluid:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+.img-fluid:nth-of-type(2) {
+    animation-delay: 0.6s;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === CARD POP-UP === */
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === ICON ANIMATION === */
+ion-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+ion-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #e0a800;
+}
+
+/* === FOOTER LOGO === */
+footer img {
+    transition: transform 0.6s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* contact animation */
+/* Fade-in + Slide-up for content section */
+.container.bg-white {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Zoom-in effect for Google Map */
+.container iframe {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 1s;
+    border-radius: 10px;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Footer logo bounce on hover */
+footer img {
+    transition: transform 0.4s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1) rotate(3deg);
+}
