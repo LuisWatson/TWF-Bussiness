@@ -555,3 +555,59 @@ footer img:hover {
 .work-text p {
     font-size: 1rem;
 }
+
+/* =========== Responsive สำหรับ Mobile =========== */
+@media (max-width: 768px) {
+
+    /* Header */
+    .sticky-top {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    header .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Hero Section */
+    .hero-fade img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .display-3 {
+        font-size: 2rem;
+        /* ลดขนาดตัวอักษรบนมือถือ */
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    /* About Section */
+    .bg-body-tertiary {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .bg-body-tertiary img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Features */
+    .row-cols-sm-2>.col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    footer img {
+        max-width: 100px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
