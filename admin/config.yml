@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main   # หรือ branch ที่ deploy อยู่
+
+media_folder: "static/uploads" # เก็บไฟล์รูป
+public_folder: "/uploads"
+
+collections:
+  - name: "news"
+    label: "ข่าวสาร"
+    folder: "news"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ชื่อเรื่อง", name: "title", widget: "string" }
+      - { label: "วันที่", name: "date", widget: "datetime" }
+      - { label: "เนื้อหา", name: "body", widget: "markdown" }
+
+  - name: "activities"
+    label: "กิจกรรม"
+    folder: "activities"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ชื่อกิจกรรม", name: "title", widget: "string" }
+      - { label: "วันที่", name: "date", widget: "datetime" }
+      - { label: "รายละเอียด", name: "body", widget: "markdown" }
+
+  - name: "villages"
+    label: "หมู่บ้านที่ดูแล"
+    folder: "villages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ชื่อหมู่บ้าน", name: "name", widget: "string" }
+      - { label: "รายละเอียด", name: "description", widget: "markdown" }
+      - { label: "ที่อยู่", name: "address", widget: "string" }
