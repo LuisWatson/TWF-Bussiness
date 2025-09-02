@@ -33,9 +33,37 @@
 <body style="background-color: #eeeeee;">
 
     <!-- Header -->
-    <div id="header"></div>
+    <nav class="navbar navbar-expand-lg sticky-top fw-bold fs-6"
+        style="background-color: #f5f5f5; padding-left: 100px; padding-right: 100px;">
+        <div class="container-fluid">
+            <!-- โลโก้ + ชื่อบริษัท -->
+            <a href="/index.html" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+                <img src="images/logo.svg" alt="TWF Logo" width="50" height="50" class="me-2">
+                <span class="fs-4" style="margin-left: 10px;">TWF Bussiness</span>
+            </a>
+
+            <!-- ปุ่ม Hamburger (แสดงเฉพาะจอเล็ก) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- เมนู -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav nav-pills">
+                    <li class="nav-item"><a href="/index.html" class="nav-link" aria-current="page">หน้าเเรก</a></li>
+                    <li class="nav-item"><a href="/services.html" class="nav-link">บริการของเรา</a></li>
+                    <li class="nav-item"><a href="/news&activity.html" class="nav-link">ข่าวสารเเละกิจกรรม</a></li>
+                    <li class="nav-item"><a href="/villages.html" class="nav-link">หมู่บ้านที่เราดูเเล</a></li>
+                    <li class="nav-item"><a href="/about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a href="/contact.html" class="nav-link">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- End Header -->
-    
+
+
     <!-- Hero -->
     <div class="position-relative px-4 py-5 border-bottom mt-5" style="margin-top: 50px">
 
@@ -45,7 +73,8 @@
         <!-- เนื้อหาจริง (ชั้นบน) -->
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5 position-relative" style="z-index:2;">
             <div class="col-10 col-sm-8 col-lg-6 mx-auto text-center hero-fade">
-                <img src="/images/logo.svg" class="img-fluid d-block mx-auto hero-fade" alt="TWF Logo" width="500" height="300" loading="lazy">
+                <img src="/images/logo.svg" class="img-fluid d-block mx-auto hero-fade" alt="TWF Logo" width="500"
+                    height="300" loading="lazy">
             </div>
             <div class="col-lg-6 text-center text-white">
                 <h1 class="display-3 fw-bold lh-1 mb-3  text-highlight">
@@ -118,69 +147,66 @@
                 <div class="row row-cols-1 row-cols-sm-2 g-4">
 
                     <div class="col d-flex flex-column gap-2">
-                        <div class="feature-icon-small" style="font-size: 30px;"> 
+                        <div class="feature-icon-small" style="font-size: 30px;">
                             <ion-icon name="albums-outline" "></ion-icon>
                         </div>
-                        <h5 class="fw-semibold mb-0 text-body-emphasis">ด้านกฎหมายและข้อพิพาท</h5>
-                        <p class="text-body-secondary">ให้คำปรึกษาเกี่ยวกับกฏหมายที่ดิน พระราชบัญญัติ การจัดสรรที่ดิน ,
-                            พระราชบัญญัติอาคารชุด</p>
-                    </div>
-
-                    <div class="col d-flex flex-column gap-2">
-                        <div class="feature-icon-small" style="font-size: 30px;">
-                            <ion-icon name="search-outline"></ion-icon>
+                        <h5 class=" fw-semibold mb-0 text-body-emphasis">ด้านกฎหมายและข้อพิพาท</h5>
+                                <p class="text-body-secondary">ให้คำปรึกษาเกี่ยวกับกฏหมายที่ดิน พระราชบัญญัติ
+                                    การจัดสรรที่ดิน ,
+                                    พระราชบัญญัติอาคารชุด</p>
                         </div>
-                        <h5 class="fw-semibold mb-0 text-body-emphasis">ด้านการติดตามและตรวจสอบ</h5>
-                        <p class="text-body-secondary">บริษัท จะส่งทีมผู้บริหารเข้าตรวจสอบ สัปดาห์ละ 1 ครั้ง</p>
-                    </div>
 
-                    <div class="col d-flex flex-column gap-2">
-                        <div class="feature-icon-small" style="font-size: 30px;">
-                            <ion-icon name="person-outline"></ion-icon>
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small" style="font-size: 30px;">
+                                <ion-icon name="search-outline"></ion-icon>
+                            </div>
+                            <h5 class="fw-semibold mb-0 text-body-emphasis">ด้านการติดตามและตรวจสอบ</h5>
+                            <p class="text-body-secondary">บริษัท จะส่งทีมผู้บริหารเข้าตรวจสอบ สัปดาห์ละ 1 ครั้ง</p>
                         </div>
-                        <h5 class="fw-semibold mb-0 text-body-emphasis">ด้านการฝึกอบรมและพัฒนาบุคลากร</h5>
-                        <p class="text-body-secondary">การคัดเลือกเเละฝึกอบรมก่อนเข้าปฏิบัติงาน</p>
-                    </div>
 
-                    <div class="col d-flex flex-column gap-2">
-                        <div class="feature-icon-small" style="font-size: 30px;">
-                            <ion-icon name="cash-outline"></ion-icon>
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small" style="font-size: 30px;">
+                                <ion-icon name="person-outline"></ion-icon>
+                            </div>
+                            <h5 class="fw-semibold mb-0 text-body-emphasis">ด้านการฝึกอบรมและพัฒนาบุคลากร</h5>
+                            <p class="text-body-secondary">การคัดเลือกเเละฝึกอบรมก่อนเข้าปฏิบัติงาน</p>
                         </div>
-                        <h5 class="fw-semibold mb-0 text-body-emphasis">ด้านบัญชีการเงินและงบประมาณ</h5>
-                        <p class="text-body-secondary">บริษษัทจะติดตั้งซอฟต์เเวร์ทางบัญชี โดยใช้โปรเเกรม Living OS
-                            โดยไม่คิดค่าใช้จ่าย เเละจะถอนโปรเเกรมออกเมื่อสิ้นสุดสัญญาจ้าง</p>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div class="feature-icon-small" style="font-size: 30px;">
+                                <ion-icon name="cash-outline"></ion-icon>
+                            </div>
+                            <h5 class="fw-semibold mb-0 text-body-emphasis">ด้านบัญชีการเงินและงบประมาณ</h5>
+                            <p class="text-body-secondary">บริษษัทจะติดตั้งซอฟต์เเวร์ทางบัญชี โดยใช้โปรเเกรม Living OS
+                                โดยไม่คิดค่าใช้จ่าย เเละจะถอนโปรเเกรมออกเมื่อสิ้นสุดสัญญาจ้าง</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Features -->
+        <!-- End Features -->
 
-    <!-- Img Spark -->
-    <div class="Spark">
-    </div>
-    <!-- End Img Spark -->
+        <!-- Img Spark -->
+        <div class="Spark">
+        </div>
+        <!-- End Img Spark -->
 
-    <!-- Footer -->
-    <div id="footer"></div>
-    <!-- End Footer -->
+        <!-- Footers -->
+        <div class="p-3 text-center" style="background-color: #333333 ; color: #ffffff; ">
+            <footer class="my-4">
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <img src="images/logo.svg" alt="TWF Logo" class="img-fluid" style="max-width:150px;">
+                </div>
+                <p>9/150 ม.4 ถ.นครอินทร์ ต.บางขุนทอง อ.บางกรวย จ.นนทบุรี 11130 <br> โทร 084-219-2688 <br> E-mail :
+                    TWF.BISINESS@GMAIL.com</p>
+                <p class="text-center ">© 2025 TWF Company</p>
+            </footer>
+        </div>
+        <!-- End Footers -->
 
-    <!-- เรียกใช้ header , footer-->
-<script>
-    fetch('/layout/header.html')
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById('header').innerHTML = data;
-        });
-    fetch('/layout/footer.html')
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        });
-</script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
