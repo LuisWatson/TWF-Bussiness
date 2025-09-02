@@ -17,8 +17,36 @@
 <body style="background-color: #eeeeee;">
 
     <!-- Header -->
-    <div id="header"></div>
+    <nav class="navbar navbar-expand-lg sticky-top fw-bold fs-6"
+        style="background-color: #f5f5f5; padding-left: 100px; padding-right: 100px;">
+        <div class="container-fluid">
+            <!-- โลโก้ + ชื่อบริษัท -->
+            <a href="/index.html" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+                <img src="images/logo.svg" alt="TWF Logo" width="50" height="50" class="me-2">
+                <span class="fs-4" style="margin-left: 10px;">TWF Bussiness</span>
+            </a>
+
+            <!-- ปุ่ม Hamburger (แสดงเฉพาะจอเล็ก) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- เมนู -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav nav-pills">
+                    <li class="nav-item"><a href="/index.html" class="nav-link" aria-current="page">หน้าเเรก</a></li>
+                    <li class="nav-item"><a href="/services.html" class="nav-link">บริการของเรา</a></li>
+                    <li class="nav-item"><a href="/news&activity.html" class="nav-link">ข่าวสารเเละกิจกรรม</a></li>
+                    <li class="nav-item"><a href="/villages.html" class="nav-link">หมู่บ้านที่เราดูเเล</a></li>
+                    <li class="nav-item"><a href="/about.html" class="nav-link">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a href="/contact.html" class="nav-link">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- End Header -->
+
 
     <!-- Hero -->
     <div class="position-relative px-4 py-5 d-flex justify-content-center align-items-center" style="min-height:10px;">
@@ -48,23 +76,18 @@
     <!-- End Gallery -->
 
 
-    <!-- Footer -->
-    <div id="footer"></div>
-    <!-- End Footer -->
-
-    <!-- เรียกใช้ header , footer-->
-    <script>
-        fetch('/layout/header.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            });
-        fetch('/layout/footer.html')
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById('footer').innerHTML = data;
-            });
-    </script>
+    <!-- Footers -->
+    <div class="p-3 text-center" style="background-color: #333333 ; color: #ffffff; ">
+        <footer class="my-4">
+            <div class="d-flex justify-content-center align-items-center mb-3">
+                <img src="images/logo.svg" alt="TWF Logo" class="img-fluid" style="max-width:150px;">
+            </div>
+            <p>9/150 ม.4 ถ.นครอินทร์ ต.บางขุนทอง อ.บางกรวย จ.นนทบุรี 11130 <br> โทร 084-219-2688 <br> E-mail :
+                TWF.BISINESS@GMAIL.com</p>
+            <p class="text-center ">© 2025 TWF Company</p>
+        </footer>
+    </div>
+    <!-- End Footers -->
 
     <script>
         // 🔹 เก็บข้อมูลข่าว + รูปภาพไว้เป็น Object
